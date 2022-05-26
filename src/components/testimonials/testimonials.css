@@ -37,7 +37,7 @@
         }
         
         .swiper-pagination-clickable .swiper-pagination-bullet {
-            background: var(--color-primary-variant);
+            background: var(--color-primary);
         }
         /* ********** MEDIA QUERIES (MEDIUM DEVICES )  ********** */
         

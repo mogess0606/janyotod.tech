@@ -8,31 +8,15 @@ import AVIR3 from '../../assets/k.jpg'
 import AVIR4 from '../../assets/m.jpg'
 
 
-// import Swiper core and required module
-//import {Navigation, Pagination, Scrollbar, Ally} from 'swiper';
-//import {Swiper, SwiperSide } from 'swiper/react';
+// import Swiper core and required modules
+import {Pagination} from 'swiper';
 
-// Import Swiper Style
-//import 'swiper/css'
-//import 'swiper/css/pagination';
-/* <Swiper className='container testimonials_container'>
-            {
-                   data.map(({avatar, name, review},index) =>{
-                       return (
-                        <SwiperSlide key={index} className='testimonial'>
-                            <div className='client__avatar'>
-                                <img src={avatar} alt="" />
-                            </div>
-                            <h5 className='client__name'>{name}</h5>
-                            <small className='client_review'>
-                                {review}
-                            </small>
-                        </SwiperSlide>
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-                       )
-                   })
-               }
-            </Swiper>  */
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+
 
 
 const data = [
@@ -63,11 +47,19 @@ const Testimonials = () => {
         <section id='testimonials'>
             <h5> Review from clients </h5>
             <h2>Testimonials</h2>
-            <div className='container testimonials_container'>
+            <Swiper className='container testimonials_container'
+
+            // install Swiper modules
+            modules={[Pagination]}
+            spaceBetween={40}
+            slidesPerView={1}
+            navigation
+            pagination={{ clickable: true }}
+            >
             {
                    data.map(({avatar, name, review},index) =>{
                        return (
-                        <article key={index} className='testimonial'>
+                        <SwiperSlide key={index} className='testimonial'>
                             <div className='client__avatar'>
                                 <img src={avatar} alt="" />
                             </div>
@@ -75,12 +67,12 @@ const Testimonials = () => {
                             <small className='client_review'>
                                 {review}
                             </small>
-                        </article>
+                        </SwiperSlide>
 
                        )
                    })
                }
-            </div>
+            </Swiper> 
         </section>
     )
 }
