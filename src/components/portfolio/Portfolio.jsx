@@ -12,7 +12,7 @@ const data = [
         image: IMG1,
         title: 'Student Information Management System',
         github: 'https://github.com/mogess0606',
-        demo: 'https://youtube.com'
+        demo: 'https://www.youtube.com/watch?v=Pk2p_Q0gw3Y&list=PLhVYLMKcOll-_bT2UHBe2e5cQxX5_o16Z'
     },
     {
         id: 2,
